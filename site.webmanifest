@@ -1,0 +1,32 @@
+{
+  "name": "AuthnPass – Open-Source Passwordless Fingerprint Authentication for Web",
+  "short_name": "AuthnPass",
+  "description": "Open-source SDK for seamless, passwordless sign-ups using device-native fingerprint authentication (WebAuthn). No passwords, no vendor lock-in. Integrate in minutes with React, Next.js & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#cabe9a",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "apple touch icon"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}
