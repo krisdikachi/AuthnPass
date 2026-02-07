@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.LogoDiv {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-right: 30px;
+    border-right: 1px solid rgba(128, 128, 128, 0.301);
+    font-family: 'Arial', sans-serif;
+  }
+  .LogoDiv a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .LogoDiv:hover a {
+    color: #666;
+  }
+  .LogoDiv:active a {
+    color: #333;
+  }
+  .LogoDiv:focus a {
+    color: #333;
+  }
+  .LogoDiv:visited a {
+    color: #333;
+  }
+
+  /* Dark mode support for LogoDiv */
+  .dark .LogoDiv {
+    color: #fff;
+    border-right-color: rgba(128, 128, 128, 0.5);
+  }
+  .dark .LogoDiv:hover a {
+    color: #ccc;
+  }
+
+/* Animated underline for navigation links */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Animated blob for hero section */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.Imageoverlay {
+ border: 2px solid #000;
+}
+.doubleShadow{
+  box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px 0px 0px #000;
+}
+.doubleShadow2{
+  box-shadow: 1px 1px #cabe9a, 2px 2px #cabe9a, 3px 3px #cabe9a, 4px 4px #cabe9a, 5px 5px 0px 0px #cabe9a
+}
+.tablecolumn{
+  height: 80px;
+  text-align: center;
+  /* vertical-align: middle; */
+  padding-left: Auto;
+  padding-right: Auto;
+
+}
+.tablecolumn2{
+  height: 80px;
+  text-align: center;
+  /* vertical-align: middle; */
+  padding-left: Auto;
+  padding-right: Auto;
+  background-color: #cabe9a6a;
+
+}
