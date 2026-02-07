@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 
+
 const config: Config = {
   darkMode: 'class',
   content: [
@@ -10,25 +11,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
-      animation: {
-        marquee: 'marquee 30s linear infinite', // Adjust duration as needed
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
-        }
-      }
-    },
-extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      },
-      keyframes: {
+        },
         'pulse-light': {
           '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
           '50%': { opacity: '0.7', transform: 'scale(1.05)' },
@@ -39,14 +29,18 @@ extend: {
         },
       },
       animation: {
+        marquee: 'marquee 30s linear infinite',
         'pulse-light': 'pulse-light 5s ease-in-out infinite alternate',
         'marquee-reviews': 'marquee-reviews 40s linear infinite', // Adjust duration as needed
       },
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
     },
-
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities }: { addUtilities: (arg0: { [x: string]: { 'animation-play-state': string } }) => void }) {
       const newUtilities = {
         '.animation-pause': {
           'animation-play-state': 'paused',
@@ -55,7 +49,7 @@ extend: {
           'animation-play-state': 'running',
         },
       }
-      addUtilities(newUtilities, ['responsive', 'hover'])
+      addUtilities(newUtilities)
     }
   ],
 }

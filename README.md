@@ -1,4 +1,4 @@
-y# AuthnPass: Your Gateway to Passwordless Web Authentication
+# AuthnPass: Your Gateway to Passwordless Web Authentication
 
 ---
 
